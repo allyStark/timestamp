@@ -17,7 +17,7 @@ app.get("/dates/:dateVal", function(request, response, next){
     } else {
         thisDate = new Date(Number(request.params.dateVal));
     }
-    //
+    
     if(thisDate == 'Invalid Date'){  
         timestamp.unix = null;
         timestamp.natural = null;    
