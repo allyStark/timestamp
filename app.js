@@ -11,11 +11,11 @@ app.get("/dates/:dateVal", function(request, response, next){
 
     var thisDate = '';
     var timestamp = { "unix": 0, "natural": ""};
-    //is the parameter a string?
+    //is the parameter a string or a unix timestamp?
     if(/\D/.test(request.params.dateVal)){
         thisDate = new Date(request.params.dateVal);
     } else {
-        thisDate = new Date(Number(request.params.dateVal));
+        thisDate = new Date(Number(request.params.dateVal) * 1000);
     }
     
     if(thisDate == 'Invalid Date'){  
