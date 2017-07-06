@@ -7,7 +7,7 @@ var app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get("/dates/:dateVal", function(request, response, next){
+app.get("/:dateVal", function(request, response, next){
 
     var thisDate = '';
     var timestamp = { "unix": 0, "natural": ""};
