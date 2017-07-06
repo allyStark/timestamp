@@ -1,6 +1,10 @@
 {
   "name": "timestampmicroservice",
   "version": "1.0.0",
+  "engines": {
+    "node": "6.11.0",
+    "npm": "5.0.3"
+  },
   "description": "",
   "main": "app.js",
   "scripts": {
